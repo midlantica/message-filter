@@ -6,16 +6,15 @@ const contentTarget = document.querySelector(".friends")
 // Function that renders a collection of friends
 const render = friendCollection => {
   contentTarget.innerHTML = `
-    ${friendCollection
-      .map(friend => {
-        return `
-          <div>
-            <input class="friend" name="friend" type="radio" value="${friend.name}">
-            ${friend.name}
-          </div>
-        `
-      })
-      .join("")}
+  ${friendCollection
+    .map(friend => {
+      return `
+    <div>
+    <input class="friend" name="friend" type="radio" value="${friend.name}">${friend.name}
+    </div>
+  `
+    })
+    .join("")}
   `
 }
 
